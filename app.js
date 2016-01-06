@@ -47,7 +47,7 @@ function($scope, posts){
             {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
           ]
       });
-        
+
       $scope.title = '';
       $scope.link = '';
     };
@@ -64,5 +64,5 @@ app.controller('PostsCtrl', [
 '$stateParams',
 'posts',
 function($scope, $stateParams, posts){
-
+    $scope.post = posts.posts[$stateParams.id];
 }]);
